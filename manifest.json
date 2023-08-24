@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Pokecardex Price Checker",
+  "version": "1.0",
+  "description": "Affiche le prix des cartes sur Pokecardex",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.pokecardex.com/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    }
+  }
+}
